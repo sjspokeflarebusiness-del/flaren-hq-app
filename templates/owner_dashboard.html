@@ -9,11 +9,11 @@
   <aside class="owner-sidebar">
     <a class="owner-brand" href="{{ url_for('owner_dashboard') }}">
       <span class="owner-brand-icon">
-  <img
-    src="{{ url_for('static', filename='images/logo.png') }}"
-    alt="FLAREN"
-  />
-</span>
+        <img
+          src="{{ url_for('static', filename='images/logo.png') }}"
+          alt="FLAREN"
+        />
+      </span>
       <div>
         <strong>FLAREN</strong>
         <small>CONTROL CENTER</small>
@@ -50,9 +50,20 @@
         </p>
       </div>
 
-      <div class="private-badge">
-        <span></span>
-        Private dashboard
+      <div class="owner-top-actions">
+        <a
+          class="owner-shop-button"
+          href="https://flareno-write.pages.dev/admin.html"
+          target="_blank"
+          rel="noopener"
+        >
+          Manage Article Shop ↗
+        </a>
+
+        <div class="private-badge">
+          <span></span>
+          Private dashboard
+        </div>
       </div>
     </header>
 
@@ -70,9 +81,9 @@
       </article>
 
       <article>
-        <span>NEW LEADS</span>
-        <strong>{{ stats.new_leads }}</strong>
-        <small>Update manually for now</small>
+        <span>SHOP ARTICLES</span>
+        <strong>Manage in Supabase</strong>
+        <small>Open Shop Admin to add products</small>
       </article>
 
       <article>
@@ -108,10 +119,12 @@
           <span class="owner-card-icon">✎</span>
           <p class="owner-card-type">PUBLIC WRITING SERVICE</p>
           <h3>FLARENO WRITE</h3>
-          <p>Animated article-writing portfolio, samples, WhatsApp lead flow, and Cloudflare hosting.</p>
+          <p>Animated article-writing portfolio, samples, shop, WhatsApp lead flow, and Cloudflare hosting.</p>
 
           <div class="owner-card-links">
             <a href="https://flareno-write.pages.dev/" target="_blank" rel="noopener">Open website ↗</a>
+            <a href="https://flareno-write.pages.dev/shop.html" target="_blank" rel="noopener">Open article shop ↗</a>
+            <a href="https://flareno-write.pages.dev/admin.html" target="_blank" rel="noopener">Open shop admin ↗</a>
             <a href="https://github.com/sjspokeflarebusiness-del/flareno-write" target="_blank" rel="noopener">Open repository ↗</a>
           </div>
         </article>
@@ -176,7 +189,35 @@
           <span>◒</span>
           <div>
             <strong>Render</strong>
-            <small>FLAREN Studio and Gram hosting</small>
+            <small>FLAREN Studio, Gram, and HQ hosting</small>
+          </div>
+          <b>↗</b>
+        </a>
+
+        <a
+          href="https://flareno-write.pages.dev/admin.html"
+          target="_blank"
+          rel="noopener"
+          class="owner-tool"
+        >
+          <span>✎</span>
+          <div>
+            <strong>FLARENO WRITE Shop Admin</strong>
+            <small>Add articles, upload PDFs, set prices, and manage the shop</small>
+          </div>
+          <b>↗</b>
+        </a>
+
+        <a
+          href="https://supabase.com/dashboard/project/ywlytcsnhatnwdmmjvtv"
+          target="_blank"
+          rel="noopener"
+          class="owner-tool"
+        >
+          <span>◫</span>
+          <div>
+            <strong>Supabase</strong>
+            <small>Products database, article PDFs, authentication, and storage</small>
           </div>
           <b>↗</b>
         </a>
@@ -248,6 +289,11 @@
         <label>
           <input type="checkbox" />
           <span>Check Gmail and WhatsApp for new leads</span>
+        </label>
+
+        <label>
+          <input type="checkbox" />
+          <span>Add or update one article in FLARENO WRITE Shop</span>
         </label>
 
         <label>

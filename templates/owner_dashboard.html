@@ -1,0 +1,276 @@
+{% extends "base.html" %}
+
+{% block title %}FLAREN Control Center{% endblock %}
+
+{% block body_class %}owner-page{% endblock %}
+
+{% block content %}
+<main class="owner-dashboard">
+  <aside class="owner-sidebar">
+    <a class="owner-brand" href="{{ url_for('owner_dashboard') }}">
+      <span class="owner-brand-icon">
+  <img
+    src="{{ url_for('static', filename='images/logo.png') }}"
+    alt="FLAREN"
+  />
+</span>
+      <div>
+        <strong>FLAREN</strong>
+        <small>CONTROL CENTER</small>
+      </div>
+    </a>
+
+    <nav class="owner-nav">
+      <a class="active" href="#overview">⌂ Overview</a>
+      <a href="#projects">◈ Projects</a>
+      <a href="#analytics">◌ Analytics</a>
+      <a href="#management">⌘ Management</a>
+      <a href="#messages">✦ Messages</a>
+    </nav>
+
+    <div class="owner-sidebar-bottom">
+      <a href="{{ url_for('public_home') }}" target="_blank">
+        Open public site ↗
+      </a>
+
+      <a class="logout-link" href="{{ url_for('owner_logout') }}">
+        Lock & log out
+      </a>
+    </div>
+  </aside>
+
+  <section class="owner-main">
+    <header class="owner-topbar" id="overview">
+      <div>
+        <p class="eyebrow">OWNER MODE · PRIVATE</p>
+        <h1>Welcome, {{ owner_username }}.</h1>
+        <p>
+          Your private command center for FLAREN systems, projects,
+          deployments, messages, and business progress.
+        </p>
+      </div>
+
+      <div class="private-badge">
+        <span></span>
+        Private dashboard
+      </div>
+    </header>
+
+    <section class="owner-stats" id="analytics">
+      <article>
+        <span>ACTIVE PROJECTS</span>
+        <strong>{{ stats.active_projects }}</strong>
+        <small>Studio, Write, Gram</small>
+      </article>
+
+      <article>
+        <span>PUBLIC SERVICES</span>
+        <strong>{{ stats.public_services }}</strong>
+        <small>Visible to customers</small>
+      </article>
+
+      <article>
+        <span>NEW LEADS</span>
+        <strong>{{ stats.new_leads }}</strong>
+        <small>Update manually for now</small>
+      </article>
+
+      <article>
+        <span>THIS MONTH</span>
+        <strong>{{ stats.monthly_revenue }}</strong>
+        <small>Revenue tracker</small>
+      </article>
+    </section>
+
+    <section class="owner-section" id="projects">
+      <div class="owner-section-title">
+        <div>
+          <p class="eyebrow">PROJECT SYSTEMS</p>
+          <h2>FLAREN Ecosystem</h2>
+        </div>
+        <span>PRIVATE VIEW</span>
+      </div>
+
+      <div class="owner-project-grid">
+        <article class="owner-project-card studio-owner-card">
+          <span class="owner-card-icon">✦</span>
+          <p class="owner-card-type">PUBLIC CREATIVE SERVICE</p>
+          <h3>FLAREN Studio</h3>
+          <p>Creative services, design work, websites, sample work, orders, and contact workflows.</p>
+
+          <div class="owner-card-links">
+            <a href="https://flaren-site.onrender.com/" target="_blank" rel="noopener">Open website ↗</a>
+            <a href="https://github.com/sjspokeflarebusiness-del/flaren-site" target="_blank" rel="noopener">Open repository ↗</a>
+          </div>
+        </article>
+
+        <article class="owner-project-card write-owner-card">
+          <span class="owner-card-icon">✎</span>
+          <p class="owner-card-type">PUBLIC WRITING SERVICE</p>
+          <h3>FLARENO WRITE</h3>
+          <p>Animated article-writing portfolio, samples, WhatsApp lead flow, and Cloudflare hosting.</p>
+
+          <div class="owner-card-links">
+            <a href="https://flareno-write.pages.dev/" target="_blank" rel="noopener">Open website ↗</a>
+            <a href="https://github.com/sjspokeflarebusiness-del/flareno-write" target="_blank" rel="noopener">Open repository ↗</a>
+          </div>
+        </article>
+
+        <article class="owner-project-card gram-owner-card">
+          <span class="owner-card-icon">◉</span>
+          <p class="owner-card-type">PRIVATE EXPERIMENT</p>
+          <h3>FLARENO GRAM</h3>
+          <p>Private FLAREN product experiment. It is visible only here and never appears on the public site.</p>
+
+          <div class="owner-card-links">
+            <a href="https://flareno-gram.onrender.com/" target="_blank" rel="noopener">Open privately ↗</a>
+            <a href="https://github.com/sjspokeflarebusiness-del/flareno-gram/" target="_blank" rel="noopener">Open repository ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="owner-section" id="management">
+      <div class="owner-section-title">
+        <div>
+          <p class="eyebrow">DEVELOPMENT & HOSTING</p>
+          <h2>Management Tools</h2>
+        </div>
+      </div>
+
+      <div class="owner-tool-grid">
+        <a
+          href="https://github.com/sjspokeflarebusiness-del"
+          target="_blank"
+          rel="noopener"
+          class="owner-tool"
+        >
+          <span>⌘</span>
+          <div>
+            <strong>GitHub</strong>
+            <small>Repositories and source code</small>
+          </div>
+          <b>↗</b>
+        </a>
+
+        <a
+          href="https://dash.cloudflare.com/a16588b6b902dd59a96c2288678f96eb/workers-and-pages"
+          target="_blank"
+          rel="noopener"
+          class="owner-tool"
+        >
+          <span>☁</span>
+          <div>
+            <strong>Cloudflare Pages</strong>
+            <small>FLARENO WRITE deployment</small>
+          </div>
+          <b>↗</b>
+        </a>
+
+        <a
+          href="https://dashboard.render.com/"
+          target="_blank"
+          rel="noopener"
+          class="owner-tool"
+        >
+          <span>◒</span>
+          <div>
+            <strong>Render</strong>
+            <small>FLAREN Studio and Gram hosting</small>
+          </div>
+          <b>↗</b>
+        </a>
+      </div>
+    </section>
+
+    <section class="owner-section" id="messages">
+      <div class="owner-section-title">
+        <div>
+          <p class="eyebrow">BUSINESS COMMUNICATION</p>
+          <h2>Inbox & Client Messages</h2>
+        </div>
+      </div>
+
+      <div class="owner-tool-grid">
+        <a
+          href="https://mail.google.com/mail/u/0/#inbox"
+          target="_blank"
+          rel="noopener"
+          class="owner-tool"
+        >
+          <span>✉</span>
+          <div>
+            <strong>Gmail</strong>
+            <small>Business email and client messages</small>
+          </div>
+          <b>↗</b>
+        </a>
+
+        <a
+          href="https://web.whatsapp.com/"
+          target="_blank"
+          rel="noopener"
+          class="owner-tool"
+        >
+          <span>◌</span>
+          <div>
+            <strong>WhatsApp Web</strong>
+            <small>Leads, clients, and conversations</small>
+          </div>
+          <b>↗</b>
+        </a>
+
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=sjspokeflarebusiness@gmail.com"
+          target="_blank"
+          rel="noopener"
+          class="owner-tool"
+        >
+          <span>＋</span>
+          <div>
+            <strong>New Business Email</strong>
+            <small>Compose from FLAREN inbox</small>
+          </div>
+          <b>↗</b>
+        </a>
+      </div>
+    </section>
+
+    <section class="owner-section task-section">
+      <div class="owner-section-title">
+        <div>
+          <p class="eyebrow">TODAY’S OPERATING SYSTEM</p>
+          <h2>Next Actions</h2>
+        </div>
+      </div>
+
+      <div class="task-list">
+        <label>
+          <input type="checkbox" />
+          <span>Check Gmail and WhatsApp for new leads</span>
+        </label>
+
+        <label>
+          <input type="checkbox" />
+          <span>Improve one public website section</span>
+        </label>
+
+        <label>
+          <input type="checkbox" />
+          <span>Send FLARENO WRITE link to relevant potential clients</span>
+        </label>
+
+        <label>
+          <input type="checkbox" />
+          <span>Commit and push important code changes to GitHub</span>
+        </label>
+      </div>
+    </section>
+
+    <footer class="owner-footer">
+      <span>FLAREN CONTROL CENTER</span>
+      <span>Private owner workspace · Build. Create. Evolve.</span>
+    </footer>
+  </section>
+</main>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Owner Login | FLAREN{% endblock %}
+
+{% block body_class %}owner-login-page{% endblock %}
+
+{% block content %}
+<main class="owner-login">
+  <div class="login-energy orange-energy"></div>
+  <div class="login-energy blue-energy"></div>
+
+  <section class="login-card">
+    <a class="login-brand" href="{{ url_for('public_home') }}">
+  <span class="login-brand-icon">
+    <img
+      src="{{ url_for('static', filename='images/logo.png') }}"
+      alt="FLAREN"
+    />
+  </span>
+  FLAREN
+</a>
+
+    <p class="eyebrow">PRIVATE OWNER ACCESS</p>
+    <h1>CONTROL<br /><span>CENTER.</span></h1>
+
+    <p class="login-description">
+      Sign in to manage FLAREN projects, deployments, communication, and
+      private systems.
+    </p>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <p class="login-error">{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <form method="post" class="owner-form">
+      <label for="username">Username</label>
+      <input
+        id="username"
+        name="username"
+        type="text"
+        autocomplete="username"
+        placeholder="Owner username"
+        required
+      />
+
+      <label for="password">Password</label>
+      <input
+        id="password"
+        name="password"
+        type="password"
+        autocomplete="current-password"
+        placeholder="Owner password"
+        required
+      />
+
+      <button class="button button-primary login-submit" type="submit">
+        Unlock Control Center
+      </button>
+    </form>
+
+    <a class="back-public" href="{{ url_for('public_home') }}">
+      ← Back to public FLAREN website
+    </a>
+  </section>
+</main>
+{% endblock %}

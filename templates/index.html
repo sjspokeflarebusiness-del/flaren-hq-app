@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Private FLAREN command center for projects, deployments, and communication."
+  />
+  <title>FLAREN CONTROL CENTER</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- PRIVATE LOCK SCREEN -->
+  <section class="lock-screen" id="lockScreen">
+    <div class="lock-orb orb-orange"></div>
+    <div class="lock-orb orb-blue"></div>
+
+    <div class="lock-card">
+      <p class="eyebrow">PRIVATE WORKSPACE</p>
+      <h1>FLAREN<br /><span>CONTROL CENTER</span></h1>
+      <p class="lock-text">
+        Projects, deployments, messages, repositories, and creative systems —
+        all in one place.
+      </p>
+
+      <form id="unlockForm" class="unlock-form">
+        <label for="password">Enter access key</label>
+
+        <div class="password-row">
+          <input
+            id="password"
+            type="password"
+            autocomplete="current-password"
+            placeholder="Access key"
+            required
+          />
+          <button type="submit">Unlock</button>
+        </div>
+
+        <p class="password-hint">Private dashboard · Authorized access only</p>
+        <p class="error-message" id="errorMessage" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- MAIN DASHBOARD -->
+  <main class="dashboard" id="dashboard" hidden>
+    <aside class="sidebar">
+      <a class="brand" href="#overview">
+        <span class="brand-mark">F</span>
+        <span>
+          <strong>FLAREN</strong>
+          <small>CONTROL CENTER</small>
+        </span>
+      </a>
+
+      <nav class="side-nav" aria-label="Dashboard navigation">
+        <a class="active" href="#overview">⌂ Overview</a>
+        <a href="#projects">◈ Projects</a>
+        <a href="#repositories">⌘ Repositories</a>
+        <a href="#hosting">◉ Hosting</a>
+        <a href="#communication">✦ Communication</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <p>PRIVATE SYSTEM</p>
+        <button class="lock-button" id="lockButton" type="button">
+          Lock dashboard
+        </button>
+      </div>
+    </aside>
+
+    <section class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">FLAREN ECOSYSTEM</p>
+          <h1>Welcome back, SJ.</h1>
+          <p class="topbar-text">
+            One place to build, deploy, manage, and grow your digital projects.
+          </p>
+        </div>
+
+        <div class="live-status">
+          <span></span>
+          Systems online
+        </div>
+      </header>
+
+      <section class="overview-grid" id="overview">
+        <article class="hero-panel">
+          <div class="panel-grid"></div>
+          <p class="eyebrow">MISSION CONTROL</p>
+          <h2>BUILD THE<br /><span>FLAREN UNIVERSE.</span></h2>
+          <p>
+            Your creative studio, writing service, experiments, code, hosting,
+            and communication tools — organized in one dashboard.
+          </p>
+
+          <div class="quick-actions">
+            <a
+              class="button primary"
+              href="https://flaren-site.onrender.com/"
+              target="_blank"
+              rel="noopener"
+            >
+              Open FLAREN Studio
+            </a>
+
+            <a
+              class="button ghost"
+              href="https://flareno-write.pages.dev/"
+              target="_blank"
+              rel="noopener"
+            >
+              Open FLARENO WRITE
+            </a>
+          </div>
+        </article>
+
+        <article class="system-panel">
+          <p class="panel-label">ECOSYSTEM STATUS</p>
+
+          <div class="status-row">
+            <span class="status-dot green"></span>
+            <div>
+              <strong>FLAREN Studio</strong>
+              <small>Creative services website</small>
+            </div>
+            <a href="https://flaren-site.onrender.com/" target="_blank" rel="noopener">Open ↗</a>
+          </div>
+
+          <div class="status-row">
+            <span class="status-dot blue"></span>
+            <div>
+              <strong>FLARENO WRITE</strong>
+              <small>Article-writing portfolio</small>
+            </div>
+            <a href="https://flareno-write.pages.dev/" target="_blank" rel="noopener">Open ↗</a>
+          </div>
+
+          <div class="status-row">
+            <span class="status-dot purple"></span>
+            <div>
+              <strong>FLARENO GRAM</strong>
+              <small>Private experiment</small>
+            </div>
+            <a href="https://flareno-gram.onrender.com/" target="_blank" rel="noopener">Open ↗</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="dashboard-section" id="projects">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">LIVE PRODUCTS</p>
+            <h2>Project Command Deck</h2>
+          </div>
+          <span>03 ACTIVE PROJECTS</span>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card studio-card">
+            <div class="project-top">
+              <span class="project-icon">✦</span>
+              <span class="tag">CREATIVE STUDIO</span>
+            </div>
+
+            <h3>FLAREN Studio</h3>
+            <p>
+              Your main digital-services studio for visual design, websites,
+              school projects, creative work, and client orders.
+            </p>
+
+            <div class="card-actions">
+              <a href="https://flaren-site.onrender.com/" target="_blank" rel="noopener">
+                Visit website ↗
+              </a>
+              <a href="https://github.com/sjspokeflarebusiness-del/flaren-site" target="_blank" rel="noopener">
+                View code ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card write-card">
+            <div class="project-top">
+              <span class="project-icon">✎</span>
+              <span class="tag">WRITING DIVISION</span>
+            </div>
+
+            <h3>FLARENO WRITE</h3>
+            <p>
+              A research-based article-writing portfolio with writing samples,
+              services, motion design, and direct client contact.
+            </p>
+
+            <div class="card-actions">
+              <a href="https://flareno-write.pages.dev/" target="_blank" rel="noopener">
+                Visit website ↗
+              </a>
+              <a href="https://github.com/sjspokeflarebusiness-del/flareno-write" target="_blank" rel="noopener">
+                View code ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card gram-card">
+            <div class="project-top">
+              <span class="project-icon">◉</span>
+              <span class="tag">PRIVATE EXPERIMENT</span>
+            </div>
+
+            <h3>FLARENO GRAM</h3>
+            <p>
+              A private FLAREN experiment. Keep it hidden from the public
+              hub until it is ready to become an official product.
+            </p>
+
+            <div class="card-actions">
+              <a href="https://flareno-gram.onrender.com/" target="_blank" rel="noopener">
+                Open privately ↗
+              </a>
+              <a href="https://github.com/sjspokeflarebusiness-del/flareno-gram/" target="_blank" rel="noopener">
+                View code ↗
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="dashboard-section" id="repositories">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">GITHUB</p>
+            <h2>Code Repositories</h2>
+          </div>
+          <a
+            class="small-link"
+            href="https://github.com/sjspokeflarebusiness-del"
+            target="_blank"
+            rel="noopener"
+          >
+            Open GitHub profile ↗
+          </a>
+        </div>
+
+        <div class="tool-grid">
+          <a
+            class="tool-card"
+            href="https://github.com/sjspokeflarebusiness-del/flaren-site"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="tool-symbol">⌘</span>
+            <div>
+              <strong>flaren-site</strong>
+              <small>Main FLAREN Studio code</small>
+            </div>
+            <b>↗</b>
+          </a>
+
+          <a
+            class="tool-card"
+            href="https://github.com/sjspokeflarebusiness-del/flareno-write"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="tool-symbol">⌘</span>
+            <div>
+              <strong>flareno-write</strong>
+              <small>FLARENO WRITE website code</small>
+            </div>
+            <b>↗</b>
+          </a>
+
+          <a
+            class="tool-card"
+            href="https://github.com/sjspokeflarebusiness-del/flareno-gram/"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="tool-symbol">⌘</span>
+            <div>
+              <strong>flareno-gram</strong>
+              <small>Private experiment code</small>
+            </div>
+            <b>↗</b>
+          </a>
+        </div>
+      </section>
+
+      <section class="dashboard-section" id="hosting">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">DEPLOYMENTS</p>
+            <h2>Hosting & Infrastructure</h2>
+          </div>
+        </div>
+
+        <div class="tool-grid">
+          <a
+            class="tool-card cloudflare"
+            href="https://dash.cloudflare.com/a16588b6b902dd59a96c2288678f96eb/workers-and-pages"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="tool-symbol">☁</span>
+            <div>
+              <strong>Cloudflare Pages</strong>
+              <small>Deploy and manage FLARENO WRITE</small>
+            </div>
+            <b>↗</b>
+          </a>
+
+          <a
+            class="tool-card render"
+            href="https://dashboard.render.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="tool-symbol">◒</span>
+            <div>
+              <strong>Render Dashboard</strong>
+              <small>Manage FLAREN Studio and FLARENO GRAM</small>
+            </div>
+            <b>↗</b>
+          </a>
+
+          <a
+            class="tool-card"
+            href="https://github.com/sjspokeflarebusiness-del"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="tool-symbol">⌘</span>
+            <div>
+              <strong>GitHub</strong>
+              <small>Push code and track updates</small>
+            </div>
+            <b>↗</b>
+          </a>
+        </div>
+      </section>
+
+      <section class="dashboard-section" id="communication">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">COMMUNICATION</p>
+            <h2>Client & Business Messages</h2>
+          </div>
+        </div>
+
+        <div class="communication-grid">
+          <a
+            class="communication-card gmail"
+            href="https://mail.google.com/mail/u/0/#inbox"
+            target="_blank"
+            rel="noopener"
+          >
+            <span>✉</span>
+            <h3>Gmail</h3>
+            <p>Check client messages, orders, and business email.</p>
+            <b>Open inbox ↗</b>
+          </a>
+
+          <a
+            class="communication-card whatsapp"
+            href="https://web.whatsapp.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            <span>◌</span>
+            <h3>WhatsApp Web</h3>
+            <p>Talk to leads, clients, friends, and collaborators.</p>
+            <b>Open WhatsApp ↗</b>
+          </a>
+
+          <a
+            class="communication-card"
+            href="mailto:sjspokeflarebusiness@gmail.com"
+          >
+            <span>＋</span>
+            <h3>New Email</h3>
+            <p>Start a new business email from your FLAREN address.</p>
+            <b>Compose email ↗</b>
+          </a>
+        </div>
+      </section>
+
+      <footer>
+        <span>FLAREN CONTROL CENTER</span>
+        <span>Build. Create. Evolve.</span>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

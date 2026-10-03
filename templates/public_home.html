@@ -1,0 +1,206 @@
+{% extends "base.html" %}
+
+{% block title %}FLAREN | Create. Write. Grow.{% endblock %}
+
+{% block body_class %}public-page{% endblock %}
+
+{% block content %}
+<main class="public-site">
+  <div class="energy energy-orange"></div>
+  <div class="energy energy-blue"></div>
+  <div class="stars" aria-hidden="true"></div>
+
+  <header class="public-nav">
+    <a class="public-brand" href="{{ url_for('public_home') }}">
+  <span class="brand-icon">
+    <img
+      src="{{ url_for('static', filename='images/logo.png') }}"
+      alt="FLAREN logo"
+    />
+  </span>
+  <span>FLAREN</span>
+</a>
+
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a
+        class="nav-cta"
+        href="https://wa.me/918838969397?text=Hi%20FLAREN%2C%20I%20would%20like%20to%20start%20a%20project."
+        target="_blank"
+        rel="noopener"
+      >
+        Start a Project
+      </a>
+    </nav>
+  </header>
+
+  <section class="public-hero">
+    <div class="hero-copy">
+      <p class="eyebrow">FLAREN · CREATIVE DIGITAL ECOSYSTEM</p>
+
+      <h1>
+        CREATE.<br />
+        WRITE.<br />
+        <span>GROW.</span>
+      </h1>
+
+      <p class="hero-description">
+        FLAREN brings ideas to life through creative design, useful websites,
+        clear writing, and digital products made for modern creators,
+        students, and small businesses.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="#services">
+          Explore Services
+        </a>
+
+        <a
+          class="button button-outline"
+          href="https://wa.me/918838969397?text=Hi%20FLAREN%2C%20I%20would%20like%20to%20start%20a%20project."
+          target="_blank"
+          rel="noopener"
+        >
+          Talk on WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="flaren-orbit" aria-hidden="true">
+      <div class="orbit-ring ring-one"></div>
+      <div class="orbit-ring ring-two"></div>
+      <div class="orbit-ring ring-three"></div>
+      <div class="orbit-core">
+  <img
+    src="{{ url_for('static', filename='images/logo.png') }}"
+    alt=""
+  />
+</div>
+      <span class="orbit-label label-one">CREATE</span>
+      <span class="orbit-label label-two">WRITE</span>
+      <span class="orbit-label label-three">GROW</span>
+    </div>
+  </section>
+
+  <section class="services-section" id="services">
+    <div class="section-title">
+      <p class="eyebrow">WHAT FLAREN BUILDS</p>
+      <h2>ONE ECOSYSTEM.<br />THREE PUBLIC DIVISIONS.</h2>
+      <p>
+        Choose the service that fits your idea. Each division has a focused
+        purpose, while FLAREN keeps the experience connected.
+      </p>
+    </div>
+
+    <div class="public-service-grid">
+      <article class="public-service-card studio-service">
+        <span class="service-number">01</span>
+        <span class="service-symbol">✦</span>
+
+        <h3>FLAREN Studio</h3>
+        <p>
+          Creative design, posters, invitations, presentations, simple
+          websites, digital visuals, and project support.
+        </p>
+
+        <ul>
+          <li>Visual design</li>
+          <li>Simple websites</li>
+          <li>Digital creative work</li>
+        </ul>
+
+        <a
+          href="https://flaren-site.onrender.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Explore FLAREN Studio <span>↗</span>
+        </a>
+      </article>
+
+      <article class="public-service-card write-service">
+        <span class="service-number">02</span>
+        <span class="service-symbol">✎</span>
+
+        <h3>FLARENO WRITE</h3>
+        <p>
+          Clear, original, research-based articles for blogs, websites,
+          student topics, business content, and digital pages.
+        </p>
+
+        <ul>
+          <li>Article writing</li>
+          <li>Research-based content</li>
+          <li>Beginner-friendly guides</li>
+        </ul>
+
+        <a
+          href="https://flareno-write.pages.dev/"
+          target="_blank"
+          rel="noopener"
+        >
+          Explore FLARENO WRITE <span>↗</span>
+        </a>
+      </article>
+
+      <article class="public-service-card products-service">
+        <span class="service-number">03</span>
+        <span class="service-symbol">◈</span>
+
+        <h3>Digital Products</h3>
+        <p>
+          Useful digital downloads being created for students, creators, and
+          people who want better systems for learning and productivity.
+        </p>
+
+        <ul>
+          <li>Study planners</li>
+          <li>Templates and wallpapers</li>
+          <li>Creator tools</li>
+        </ul>
+
+        <button class="coming-soon-button" type="button">
+          Coming Soon
+        </button>
+      </article>
+    </div>
+  </section>
+
+  <section class="public-about" id="about">
+    <div>
+      <p class="eyebrow">THE FLAREN IDEA</p>
+      <h2>SMALL IDEAS CAN<br /><span>BECOME REAL SYSTEMS.</span></h2>
+    </div>
+
+    <p>
+      FLAREN is an independent creative-tech ecosystem. We build useful
+      digital experiences that help people create, communicate, learn, and
+      grow online.
+    </p>
+  </section>
+
+  <section class="public-contact">
+    <p class="eyebrow">HAVE AN IDEA?</p>
+    <h2>LET’S MAKE IT<br /><span>REAL.</span></h2>
+
+    <a
+      class="button button-primary"
+      href="https://wa.me/918838969397?text=Hi%20FLAREN%2C%20I%20would%20like%20to%20start%20a%20project."
+      target="_blank"
+      rel="noopener"
+    >
+      Start a Project on WhatsApp
+    </a>
+  </section>
+
+  <footer class="public-footer">
+    <div>
+      <strong>FLAREN</strong>
+      <span>Create. Write. Grow.</span>
+    </div>
+
+    <p>© 2026 FLAREN. Independent creative-tech ecosystem.</p>
+  </footer>
+</main>
+{% endblock %}

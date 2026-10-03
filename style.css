@@ -968,3 +968,39 @@ footer span:first-child {
     transition-duration: 0.01ms !important;
   }
 }
+.owner-top-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.owner-shop-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid rgba(255, 106, 0, 0.7);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  background: rgba(255, 106, 0, 0.14);
+  transition: 0.25s ease;
+}
+
+.owner-shop-button:hover {
+  border-color: #ff6a00;
+  background: #ff6a00;
+  color: #07111f;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 720px) {
+  .owner-top-actions {
+    justify-content: flex-start;
+  }
+}
